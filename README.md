@@ -18,7 +18,7 @@ For users that need to keep track of a lot of information, it's easy to forget o
 Deployed Website: https://rosajen27.github.io/note-taker/
 
 
-![note-taker](./Assets/demo.PNG)
+![note-taker](./assets/images/demo.PNG)
 
 ## Built With
 
