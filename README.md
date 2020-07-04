@@ -32,6 +32,8 @@ Deployed Website: https://rosajen27.github.io/note-taker/
 ## Installation 
 
 
+`$ npm install express`
+
 ## Usage
 
 * This app will allow users to create and save notes.
