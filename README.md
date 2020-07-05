@@ -15,8 +15,6 @@ For users that need to keep track of a lot of information, it's easy to forget o
 
 ## Deployment
 
-Deployed Website: https://rosajen27.github.io/note-taker/
-
 
 ![note-taker](./assets/images/demo.PNG)
 
@@ -31,8 +29,9 @@ Deployed Website: https://rosajen27.github.io/note-taker/
 
 ## Installation 
 
-
+`$ npm init`
 `$ npm install express`
+`$ node server.js`
 
 ## Usage
 
