@@ -1,14 +1,23 @@
 {
   "name": "note-taker",
   "version": "1.0.0",
-  "description": "",
+  "description": "For users that need to keep track of a lot of information, it's easy to forget or be unable to recall something important. Being able to take persistent notes allows users to have written information available when needed. This is a full-stack application that can be used to write, save, and delete notes. This application will use an express backend and save and retrieve note data from a JSON file.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Jennifer Rosa (Rosajen27)",
+  "license": "MIT",
   "dependencies": {
-    "express": "^4.16.4"
-  }
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rosajen27/note-taker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rosajen27/note-taker/issues"
+  },
+  "homepage": "https://github.com/rosajen27/note-taker#readme"
 }
