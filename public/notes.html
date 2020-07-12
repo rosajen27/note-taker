@@ -41,16 +41,36 @@
 
 <!--AJAX CALL in order to grab the data from the API Route & display data on HTML page-->
 <script>
+
   function runNotesQuery() {
-    const currentURL = window.location.origin;
+    var currentURL = window.location.origin;
 
     $.ajax({ url: currentURL + "/api/notes", method: "GET" })
+
       .done(function (notesData) {
+
         console.log("====================");
         console.log("URL: " + currentURL + "/api/notes");
         console.log(notesData);
+        console.log("====================");
+
+        for (var i = 0; i < notesData.length; i++) {
+          console.log(notesData[i]);
+
+          var notesSection = $("<div>");
+          notesSection.addClass('?');
+          notesSection.attr('id', '?' + i + 1);
+          $("#notesSection").append(notesSection);
+
+          var notesNumber = i + 1;
+
+          $("#?" + i + 1).append('<h2><span class="label label-primary">' + notesNumber + "</span> | " + notesData[i].title + "</h2>");
+        }
+
       });
+
   }
+
   runNotesQuery();
 </script>
 
