@@ -1,7 +1,7 @@
 const notesArray = [
     {
-        "title":"Test Title",
-        "text":"Test text"
+        title:"Test Title",
+        text:"Test text"
     }
 ];
 
