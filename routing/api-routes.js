@@ -6,9 +6,7 @@ module.exports = function (app) {
     });;
 
     app.post('/api/notes', function (req, res) {
-        if(notesData.length < 0) {
             notesData.push(req.body);
             res.json(true);
-        }
     });
 }
