@@ -73,17 +73,19 @@
 
   runNotesQuery();
 
-// Save Note 
+  // Save Note 
+  $(".save-note").on("click", function () {
 
-$(".save-note").on("click", function () {
+    var newNote = {
+      title: $('.note-title').val().trim();
+      text: $('.note-textarea').val().trim();
+    };
 
-  var newNote = {
-    title: $('.note-title').val().trim();
-    text: $('.note-textarea').val().trim();
-  };
+    console.log(newNote);
+    return false;
 
-  console.log(newNote);
-});
+  });
+
 </script>
 
 </html>
