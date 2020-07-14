@@ -25,7 +25,7 @@
     <div class="row">
       <div class="col-4 list-container">
         <div class="card">
-          <ul class="list-group">
+          <ul class="list-group" id="notesSection">
           </ul>
         </div>
       </div>
@@ -58,13 +58,13 @@
           console.log(notesData[i]);
 
           var notesSection = $("<div>");
-          notesSection.addClass('?');
-          notesSection.attr('id', '?' + i + 1);
+          notesSection.addClass('well');
+          notesSection.attr('id', 'notesWell-' + i + 1);
           $("#notesSection").append(notesSection);
 
           var notesNumber = i + 1;
 
-          $("#?" + i + 1).append('<h2><span class="label label-primary">' + notesNumber + "</span> | " + notesData[i].title + "</h2>");
+          $("#notesWell-" + i + 1).append('<h2><span class="label label-primary">' + notesNumber + "</span> | " + notesData[i].title + "</h2>" + notesData[i].text + "<br><hr>");
         }
 
       });
