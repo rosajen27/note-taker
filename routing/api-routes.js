@@ -10,9 +10,4 @@ module.exports = function (app) {
         res.json(true);
     });
 
-    app.post('/api/clear', function () {
-        notesData = [];
-
-        console.log(notesData);
-    })
 }

@@ -16,7 +16,6 @@ require('./routing/html-routes.js')(app);
 
 //displays static files such as css & js
 app.use(express.static('public'))
-app.use(express.static('files'))
 
 app.listen(PORT, function() {
     console.log("App listening on PORT: " + PORT);

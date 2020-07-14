@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.3/flatly/bootstrap.min.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
     integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-  <link href="/assets/css/styles.css">
+  <link rel="stylesheet" href="../public/assets/css/styles.css">
 </head>
 
 <body>
@@ -26,7 +26,6 @@
       <div class="col-4 list-container">
         <div class="card">
           <ul class="list-group" id="notesSection">
-            <a href="#" id="clear">Clear All Notes</a>
           </ul>
         </div>
       </div>
@@ -37,87 +36,8 @@
     </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="/assets/js/index.js"></script>
+  <script src="../public/assets/js/index.js"></script>
+
 </body>
-
-<!--AJAX CALL in order to grab the data from the API Route & display data on HTML page-->
-<script>
-
-  function runNotesQuery() {
-    var currentURL = window.location.origin;
-
-    $.ajax({ url: currentURL + "/api/notes", method: "GET" })
-
-      .done(function (notesData) {
-
-        console.log("====================");
-        console.log("URL: " + currentURL + "/api/notes");
-        console.log(notesData);
-        console.log("====================");
-
-        for (var i = 0; i < notesData.length; i++) {
-          console.log(notesData[i]);
-
-          var notesSection = $("<div>");
-          notesSection.addClass('well');
-          notesSection.attr('id', 'notesWell-' + i + 1);
-          $("#notesSection").append(notesSection);
-
-          var notesNumber = i + 1;
-
-          $("#notesWell-" + i + 1).append('<h2><span class="label label-primary">' + notesNumber + "</span> | " + notesData[i].title + "</h2>" + notesData[i].text + "<br><hr>");
-        }
-      });
-
-  }
-
-  // Clear all notes
-  function clearNotes() {
-    var currentURL = window.location.origin;
-    $.ajax({ url: currentURL + "/api/clear", method: "POST" })
-  }
-
-  $("#clear").on('click', function(){
-    alert("Clearing...");
-    clearNotes();
-    location.reload();
-  });
-
-  runNotesQuery();
-
-  // Save Note into an object
-  $(".save-note").on("click", function () {
-
-    var newNote = {
-      title: $(".note-title").val().trim(),
-      text: $(".note-textarea").val().trim()
-    };
-
-    console.log(newNote);
-
-    // Post note object with AJAX call
-    var currentURL = window.location.origin;
-
-    $.post(currentURL + "/api/notes", newNote, function (data) {
-
-      if (data == true) {
-        alert("Note Saved!");
-      }
-
-      if (data == false) {
-        alert("Error Saving: Try again.");
-      }
-
-      // Clear inputs after saving note
-      $(".note-title").val("");
-      $(".note-textarea").val("");
-
-    });
-
-    return false;
-
-  });
-
-</script>
 
 </html>
