@@ -65,16 +65,24 @@
           var notesNumber = i + 1;
 
           $("#notesWell-" + i + 1).append('<h2><span class="label label-primary">' + notesNumber + "</span> | " + notesData[i].title + "</h2>" + notesData[i].text + "<br><hr>");
+          location.reload();
         }
 
       });
 
   }
-
+  
+  // Clear all notes
   function clearNotes() {
     var currentURL = window.location.origin;
     $.ajax({ url: currentURL + "/api/clear", method: "POST" })
   }
+
+  $("#clear").on('click', function(){
+    alert("Clearing...");
+    clearNotes();
+    location.reload();
+  });
 
   clearNotes();
   runNotesQuery();
