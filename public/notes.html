@@ -26,6 +26,7 @@
       <div class="col-4 list-container">
         <div class="card">
           <ul class="list-group" id="notesSection">
+            <a href="" id="clear">Clear All Notes</a>
           </ul>
         </div>
       </div>
@@ -65,13 +66,11 @@
           var notesNumber = i + 1;
 
           $("#notesWell-" + i + 1).append('<h2><span class="label label-primary">' + notesNumber + "</span> | " + notesData[i].title + "</h2>" + notesData[i].text + "<br><hr>");
-          location.reload();
         }
-
       });
 
   }
-  
+
   // Clear all notes
   function clearNotes() {
     var currentURL = window.location.origin;
@@ -84,7 +83,6 @@
     location.reload();
   });
 
-  clearNotes();
   runNotesQuery();
 
   // Save Note into an object

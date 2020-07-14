@@ -1,17 +1,18 @@
-const notesData = require ('../db/notes-data.js');
+var notesData = require('../db/notes-data.js');
 
 module.exports = function (app) {
     app.get('/api/notes', function (req, res) {
         res.json(notesData);
-    });;
+    });
 
     app.post('/api/notes', function (req, res) {
-            notesData.push(req.body);
-            res.json(true);
+        notesData.push(req.body);
+        res.json(true);
     });
 
-    app.post('/api/clear', function(){
+    app.post('/api/clear', function () {
         notesData = [];
+
         console.log(notesData);
-    });
+    })
 }
