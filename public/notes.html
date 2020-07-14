@@ -71,6 +71,12 @@
 
   }
 
+  function clearNotes() {
+    var currentURL = window.location.origin;
+    $.ajax({ url: currentURL + "/api/clear", method: "POST" })
+  }
+
+  clearNotes();
   runNotesQuery();
 
   // Save Note into an object
@@ -86,13 +92,13 @@
     // Post note object with AJAX call
     var currentURL = window.location.origin;
 
-    $.post(currentURL + "/api/notes", newNote, function(data) {
+    $.post(currentURL + "/api/notes", newNote, function (data) {
 
-      if (data==true) {
+      if (data == true) {
         alert("Note Saved!");
       }
 
-      if (data==false) {
+      if (data == false) {
         alert("Error Saving: Try again.");
       }
 
