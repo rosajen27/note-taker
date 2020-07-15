@@ -30,7 +30,7 @@ html, body {
 
 .note-title {
   height: auto;
-  width: auto;
+  width: 100vh;
   margin-top: 13px;
   font-size: 3rem;
 }
