@@ -25,7 +25,6 @@ module.exports = function (app) {
 
         notesData = notesData.filter(post => post.id !== parseInt(req.params.id));
 
-        notesData.push(req.body);
         res.json(true);
 
     });
