@@ -1,3 +1,3 @@
-const notesArray = [];
+var notesArray = [];
 
 module.exports = notesArray;

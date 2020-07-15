@@ -1,4 +1,4 @@
-const notesData = require ('../db/notes-data.js');
+var notesData = require('../db/notes-data.js');
 
 module.exports = function (app) {
 
@@ -18,4 +18,17 @@ module.exports = function (app) {
 
         console.log(notesData);
     });
+
+    // delete note
+    app.delete('/api/notes/:id', function (req, res) {
+        console.log("req params id: " + req.params.id);
+
+        notesData = notesData.filter(post => post.id !== parseInt(req.params.id));
+
+        notesData.push(req.body);
+        res.json(true);
+
+    });
+
+
 }
