@@ -40,9 +40,6 @@ Heroku Deployment: https://rosa-note-taker.herokuapp.com/
 * It will also allow users to view previously saved notes and to delete previously saved notes.
 
 
-## Tests
-
-
 ## Authors
 
   - **Jennifer Rosa**
