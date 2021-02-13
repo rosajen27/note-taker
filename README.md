@@ -13,9 +13,10 @@ For users that need to keep track of a lot of information, it's easy to forget o
 ## Deployment
 
 
-Heroku Deployment: https://rosa-note-taker.herokuapp.com/
+Demo: https://rosa-note-taker.herokuapp.com/
 
-![note-taker](./public/assets/images/demo.PNG)
+![note-taker](./public/assets/images/demo.png)
+![note-taker](./public/assets/images/demo2.png)
 
 
 ## Built With
