@@ -1,14 +1,11 @@
-# Note Taker
+# 📝 Note Taker
 
-For users that need to keep track of a lot of information, it's easy to forget or be unable to recall something important. Being able to take persistent notes allows users to have written information available when needed. This is a full-stack application that can be used to write, save, and delete notes. This application will use an express backend and save and retrieve note data from a JSON file.
+For users that need to keep track of a lot of information, it's easy to forget or be unable to recall something important. Being able to take persistent notes allows users to have written information available when needed. This is a full-stack application that can be used to write, save, and delete notes. This application uses an express backend and saves and retrieves note data from a JSON file.
 
 
 ## Table of Contents
 * [Deployment](#deployment)
 * [Built With](#built-with)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Authors](#authors)
 * [License](#license)
 * [Acknowledgements](#acknowledgement)
 
@@ -17,7 +14,9 @@ For users that need to keep track of a lot of information, it's easy to forget o
 
 
 Heroku Deployment: https://rosa-note-taker.herokuapp.com/
+
 ![note-taker](./public/assets/images/demo.PNG)
+
 
 ## Built With
 
@@ -26,18 +25,6 @@ Heroku Deployment: https://rosa-note-taker.herokuapp.com/
 * JavaScript
 * Node.js
 * Express.js
-
-
-## Installation 
-
-`$ npm init`
-`$ npm install express`
-`$ node server.js`
-
-## Usage
-
-* This app will allow users to create and save notes.
-* It will also allow users to view previously saved notes and to delete previously saved notes.
 
 
 ## Authors
@@ -52,7 +39,7 @@ Heroku Deployment: https://rosa-note-taker.herokuapp.com/
 
 This project is licensed under the MIT License.
 
-Copyright (c) 2020 Jennifer Rosa
+Copyright (c) 2021 Jennifer Rosa
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
